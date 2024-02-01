@@ -7,8 +7,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class PropertyManager {
 
+    protected static final Logger logger = LogManager.getLogger();
+
+    
     private static Properties properties;
 
     /**
@@ -28,23 +34,23 @@ public class PropertyManager {
             sf = new FileInputStream(propertyFileLocation);
             properties.load(sf);
 
-            System.out.println("Property file successfully loaded from location: " + propertyFileLocation);
-            System.out.println("Property Contents: " + properties.toString());
+            logger.info("Property file successfully loaded from location: " + propertyFileLocation);
+            logger.info("Property Contents: " + properties.toString());
 
         }
         catch (FileNotFoundException fnfe)
         {
-            System.out.println("Property file not found.");
+            logger.error("Property file not found.");
             throw new PropertyFileNotFoundException ("Property File cannot be found.", fnfe);
         }
         catch (IOException ioe)
         {
-            System.out.println("IOException while loading Properties file.");
+            logger.error("IOException while loading Properties file.");
             throw new PropertyFileNotFoundException ("IOException while loading Properties file.", ioe);
         }
         catch (Exception excp)
         {
-            System.out.println("Exception while loading Properties file.");
+            logger.error("Exception while loading Properties file.");
             throw new PropertyFileNotFoundException("Exception while loading Properties file.", excp);
         }
         finally

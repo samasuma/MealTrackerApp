@@ -1,9 +1,14 @@
 package main.com.healthtracker.model.business.manager;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import main.com.healthtracker.model.business.exception.PropertyFileNotFoundException;
 import main.com.healthtracker.model.services.manager.PropertyManager;
 
 public abstract class ManagerSuperType {
+
+    protected static final Logger logger = LogManager.getLogger();
 
     static
     {
@@ -13,7 +18,7 @@ public abstract class ManagerSuperType {
         }
         catch (PropertyFileNotFoundException propertyFileNotFoundException)
         {
-            System.out.println ("Application Properties failed to be loaded - Application exiting...");
+        	logger.error("Application Properties failed to be loaded - Application exiting...");
             System.exit(1); // since we can't load the properties and this being crucial we'll exit the application!
         }
     } // end of static initializer block
@@ -62,7 +67,7 @@ public abstract class ManagerSuperType {
         }
         else
         {
-            System.out.println("Property file location not set. Passed in value is: " + propertyFileLocation + ".");
+            logger.error("Property file location not set. Passed in value is: " + propertyFileLocation + ".");
             throw new PropertyFileNotFoundException ("Property file location not set", null);
         }
 

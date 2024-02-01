@@ -7,7 +7,13 @@ import java.util.List;
 import main.com.healthtracker.model.business.exception.ServiceLoadException;
 import main.com.healthtracker.model.domain.Meal;
 
+import org.apache.logging.log4j.LogManager; 
+import org.apache.logging.log4j.Logger;
+
 public class Main {
+	
+    protected static final Logger logger = LogManager.getLogger();
+
 
 	public static void main(String[] args) {
 		
@@ -25,7 +31,7 @@ public class Main {
 		}
 		 try {
 			List<Meal> allMeals = mealManager.getAllMeals();
-			System.out.println(allMeals.isEmpty());
+			logger.info(allMeals.isEmpty());
 		
 		} catch (ServiceLoadException e) {
 			// TODO Auto-generated catch block

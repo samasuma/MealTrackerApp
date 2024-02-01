@@ -29,7 +29,7 @@ public class MealJFrameController implements ActionListener {
 
 		if (e.getSource().equals(mealJFrame.getSubmitButton())) {
 			customerMealAction(e);
-			
+
 		}
 
 	}
@@ -39,14 +39,6 @@ public class MealJFrameController implements ActionListener {
 		setMealTracker(myMeal);
 		mealJFrame.getMyMeal().setListData(getMealTracker().getMeals().toArray());
 
-		System.out.println(myMeal.toString());
-		
-		System.out.println("challenge: " + getMealTracker().getMeals().toString());
-
-		System.out.println("Tracker bros: " + getMealTracker().getMeals().toString());
-		
-		
-		
 	}
 
 	public MealTracker getMealTracker() {
@@ -58,7 +50,5 @@ public class MealJFrameController implements ActionListener {
 		mealTracker.addMeal(myMeal);
 
 	}
-	
-	
 
 }
