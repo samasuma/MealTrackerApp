@@ -12,7 +12,7 @@ import main.com.healthtracker.model.domain.Meal;
 
 public class MealJFrame extends JFrame {
 
-	private Button homeButton, submitButton;
+	private Button submitButton;
 	private JLabel mealLbl, nameLbl, servingsLbl, caloriesLbl;
 	private JTextField nameField, caloriesField, servingsField;
 	private JList myMeal;
@@ -28,9 +28,6 @@ public class MealJFrame extends JFrame {
 
 		// Layout
 		setLayout(new FlowLayout());
-
-		homeButton = new Button("Home");
-		add(homeButton);
 
 		mealLbl = new JLabel("Meal");
 		add(mealLbl);
@@ -52,13 +49,12 @@ public class MealJFrame extends JFrame {
 
 		servingsField = new JTextField(20);
 		add(servingsField);
-		
+
 		submitButton = new Button("Submit");
 		add(submitButton);
-		
+
 		myMeal = new JList();
 		add(myMeal);
-		
 
 		mealJFrameController = new MealJFrameController(this);
 
@@ -71,10 +67,6 @@ public class MealJFrame extends JFrame {
 		return myMeal;
 	}
 
-	public Button getHomeButton() {
-		return homeButton;
-	}
-	
 	public Button getSubmitButton() {
 		return submitButton;
 	}
@@ -96,6 +88,7 @@ public class MealJFrame extends JFrame {
 		String meal_name = getNameField().getText();
 
 		String calories = getCaloriesField().getText();
+		
 		int meal_calories = Integer.parseInt(calories);
 
 		String servings = getServingsField().getText();
@@ -105,4 +98,6 @@ public class MealJFrame extends JFrame {
 
 		return myMeal;
 	}
+	
+	
 }

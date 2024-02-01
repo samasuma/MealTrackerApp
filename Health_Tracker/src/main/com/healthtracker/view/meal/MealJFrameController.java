@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 
 import main.com.healthtracker.model.domain.Meal;
 import main.com.healthtracker.model.domain.MealTracker;
-import main.com.healthtracker.view.mainjframe.MainJFrame;
 
 public class MealJFrameController implements ActionListener {
 
@@ -19,7 +18,7 @@ public class MealJFrameController implements ActionListener {
 
 		this.mealJFrame = mealJFrame;
 
-		mealJFrame.getHomeButton().addActionListener(this);
+		mealJFrame.getSubmitButton().addActionListener(this);
 
 		mealJFrame.setVisible(true);
 
@@ -29,12 +28,8 @@ public class MealJFrameController implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 		if (e.getSource().equals(mealJFrame.getSubmitButton())) {
-			System.out.println("Grahh");
-			// navigateHomePage(e);
-		} else if (e.getSource().equals(mealJFrame.getHomeButton())) {
-			System.out.println("Grahh, Boom!");
 			customerMealAction(e);
-
+			
 		}
 
 	}
@@ -42,20 +37,16 @@ public class MealJFrameController implements ActionListener {
 	private void customerMealAction(ActionEvent e) {
 		Meal myMeal = mealJFrame.getMeal();
 		setMealTracker(myMeal);
+		mealJFrame.getMyMeal().setListData(getMealTracker().getMeals().toArray());
+
 		System.out.println(myMeal.toString());
-		System.out.println("challenge: "+ getMealTracker().getMeals().toString());
 		
-		
-System.out.println("Tracker bros: " + getMealTracker().getMeals().toString() );
-		
-mealJFrame.getMyMeal().setListData(getMealTracker().getMeals().toArray());
-		
-	}
+		System.out.println("challenge: " + getMealTracker().getMeals().toString());
 
-	private void navigateHomePage(ActionEvent e) {
-		mealJFrame.dispose();
-		new MainJFrame();
-
+		System.out.println("Tracker bros: " + getMealTracker().getMeals().toString());
+		
+		
+		
 	}
 
 	public MealTracker getMealTracker() {
@@ -67,5 +58,7 @@ mealJFrame.getMyMeal().setListData(getMealTracker().getMeals().toArray());
 		mealTracker.addMeal(myMeal);
 
 	}
+	
+	
 
 }
