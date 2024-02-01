@@ -1,0 +1,69 @@
+@startuml
+
+class Meal {
+    -name: String
+    -caloriesPerServing: int
+    -numberOfServings: int
+    -date: Date
+
+    +Meal(name: String, caloriesPerServing: int, numberOfServings: int)
+    +Meal(name: String, caloriesPerServing: int, numberOfServings: int, date: Date)
+    +getTotalCalories(): int
+    +getName(): String
+    +getCaloriesPerServing(): int
+    +getNumberOfServings(): int
+    +setName(name: String): void
+    +setCaloriesPerServing(caloriesPerServing: int): void
+    +setNumberOfServings(numberOfServings: int): void
+    +validate(): boolean
+    +hashCode(): int
+    +equals(obj: Object): boolean
+    +toString(): String
+    +getDate(): Object
+}
+
+class MealTracker {
+    -meals: List<Meal>
+
+    +MealTracker()
+    +addMeal(meal: Meal): void
+    +getMeals(): List<Meal>
+}
+
+interface MealTrackerService {
+    +addMeal(meal: Meal): void
+    +getMeals(): List<Meal>
+}
+
+class MealTrackerServiceImpl implements MealTrackerService {
+    -mealTracker: MealTracker
+
+    +MealTrackerServiceImpl()
+    +addMeal(meal: Meal): void
+    +getMeals(): List<Meal>
+}
+
+class ServiceFactory {
+    +createMealTrackerService(): MealTrackerService
+}
+
+ServiceFactory -> MealTrackerService : creates >
+MealTrackerService --> MealTrackerServiceImpl : implements >
+
+MealTrackerServiceImpl --> MealTracker : uses >
+MealTrackerService --> Meal : uses >
+
+@enduml
+
+
+
+
+Explanation of the syntax:
+
+The syntax starts with the @startuml directive, which indicates the start of the PlantUML code.
+The class keyword is used to define the Meal and MealTracker classes. The - symbol before each attribute indicates that the attribute is private. The + symbol before each method indicates that the method is public.
+The interface keyword is used to define the MealTrackerService interface, which has two methods: addMeal and getMeals.
+The class keyword is used to define the MealTrackerServiceImpl class, which implements the MealTrackerService interface and has a MealTracker instance variable. The -- symbol is used to indicate the association between the MealTrackerServiceImpl and MealTracker classes.
+The class keyword is used to define the ServiceFactory class, which has a createMealTrackerService method that returns a MealTrackerService object. The -> symbol is used to indicate the dependency between ServiceFactory and MealTrackerService.
+The --> symbol is used to indicate a unidirectional association between the MealTrackerService and Meal classes, and between the MealTracker and Meal classes. This means that the MealTrackerService and MealTracker classes use the Meal class, but not the other way around.
+The @enduml directive indicates the end of the PlantUML code.
