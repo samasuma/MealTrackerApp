@@ -1,8 +1,9 @@
-package main.com.healthtracker.view;
+package main.java.com.healthtracker.view;
 
 import javax.swing.UIManager;
-import main.com.healthtracker.view.meal.MealJFrame;
-import main.com.healthtracker.view.meal.MealJFrameController;
+
+import main.java.com.healthtracker.view.meal.MealJFrame;
+import main.java.com.healthtracker.view.meal.MealJFrameController;
 
 public class ViewDriver {
 

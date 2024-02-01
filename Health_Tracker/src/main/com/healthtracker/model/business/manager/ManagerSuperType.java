@@ -3,8 +3,8 @@ package main.com.healthtracker.model.business.manager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import main.com.healthtracker.model.business.exception.PropertyFileNotFoundException;
 import main.com.healthtracker.model.services.manager.PropertyManager;
+import main.java.com.healthtracker.model.business.exception.PropertyFileNotFoundException;
 
 public abstract class ManagerSuperType {
 

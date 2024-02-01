@@ -1,4 +1,4 @@
-package test.com.healthtracker.model.business.manager;
+package test.java.com.healthtracker.model.business.manager;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.List;
 
-import main.com.healthtracker.model.business.exception.ServiceLoadException;
 import main.com.healthtracker.model.business.manager.MealManager;
-import main.com.healthtracker.model.domain.Meal;
+import main.java.com.healthtracker.model.business.exception.ServiceLoadException;
+import main.java.com.healthtracker.model.domain.Meal;
 
 /**
  * The MealManagerTest class contains JUnit test cases for the MealManager class.

@@ -12,9 +12,9 @@ import main.com.healthtracker.model.services.exception.MealTrackerServiceExcepti
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import main.com.healthtracker.model.domain.Meal;
 import main.com.healthtracker.model.services.mealtrackingservice.IMealTrackerService;
 import main.com.healthtracker.model.services.mealtrackingservice.MealTrackerServiceImpl;
+import main.java.com.healthtracker.model.domain.Meal;
 
 import static org.junit.jupiter.api.Assertions.*;
 

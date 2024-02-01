@@ -1,4 +1,4 @@
-package test.com.healthtracker.model.domain;
+package test.java.com.healthtracker.model.domain;
 
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;

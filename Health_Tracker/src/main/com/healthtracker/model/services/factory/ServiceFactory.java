@@ -3,8 +3,8 @@ package main.com.healthtracker.model.services.factory;
 import java.lang.reflect.Constructor;
 import java.util.UUID;
 
-import main.com.healthtracker.model.business.exception.ServiceLoadException;
 import main.com.healthtracker.model.services.mealtrackingservice.IMealTrackerService;
+import main.java.com.healthtracker.model.business.exception.ServiceLoadException;
 
 
 /**

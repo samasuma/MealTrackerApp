@@ -8,9 +8,9 @@ package main.com.healthtracker.model.services.mealtrackingservice;
 import java.time.LocalDate;
 import java.util.List;
 
-import main.com.healthtracker.model.domain.Meal;
 import main.com.healthtracker.model.services.IService;
 import main.com.healthtracker.model.services.exception.MealTrackerServiceException;
+import main.java.com.healthtracker.model.domain.Meal;
 
 /**
  * This interface represents the functionality of a MealTrackerService,

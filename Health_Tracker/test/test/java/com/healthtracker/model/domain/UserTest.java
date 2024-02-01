@@ -1,13 +1,14 @@
-package test.com.healthtracker.model.domain;
+package test.java.com.healthtracker.model.domain;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import main.java.com.healthtracker.model.domain.User;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.UUID;
-
-import main.com.healthtracker.model.domain.User;
 
 public class UserTest {
 

@@ -3,9 +3,8 @@ package main.com.healthtracker.model.business.manager;
 import java.time.LocalDate;
 import java.util.List;
 
-
-import main.com.healthtracker.model.business.exception.ServiceLoadException;
-import main.com.healthtracker.model.domain.Meal;
+import main.java.com.healthtracker.model.business.exception.ServiceLoadException;
+import main.java.com.healthtracker.model.domain.Meal;
 
 import org.apache.logging.log4j.LogManager; 
 import org.apache.logging.log4j.Logger;

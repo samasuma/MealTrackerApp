@@ -1,4 +1,4 @@
-package main.com.healthtracker.model.domain;
+package main.java.com.healthtracker.model.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;

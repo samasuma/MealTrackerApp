@@ -1,4 +1,4 @@
-package main.com.healthtracker.view.meal;
+package main.java.com.healthtracker.view.meal;
 
 import java.awt.Button;
 import java.awt.FlowLayout;
@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JTextField;
 
-import main.com.healthtracker.model.domain.Meal;
+import main.java.com.healthtracker.model.domain.Meal;
 
 public class MealJFrame extends JFrame {
 

@@ -1,8 +1,9 @@
-package test.com.healthtracker.model.domain;
+package test.java.com.healthtracker.model.domain;
 
-import main.com.healthtracker.model.domain.Meal;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import main.java.com.healthtracker.model.domain.Meal;
 
 import java.time.LocalDate;
 

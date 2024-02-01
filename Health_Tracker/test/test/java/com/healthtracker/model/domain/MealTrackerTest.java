@@ -1,10 +1,10 @@
-package test.com.healthtracker.model.domain;
+package test.java.com.healthtracker.model.domain;
 
 import org.junit.jupiter.api.Test;
 
-import main.com.healthtracker.model.domain.Meal;
-import main.com.healthtracker.model.domain.MealTracker;
-import main.com.healthtracker.model.domain.User;
+import main.java.com.healthtracker.model.domain.Meal;
+import main.java.com.healthtracker.model.domain.MealTracker;
+import main.java.com.healthtracker.model.domain.User;
 
 import static org.junit.jupiter.api.Assertions.*;
 

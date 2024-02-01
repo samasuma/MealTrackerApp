@@ -11,9 +11,9 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-import main.com.healthtracker.model.domain.Meal;
-import main.com.healthtracker.model.domain.MealTracker;
 import main.com.healthtracker.model.services.exception.MealTrackerServiceException;
+import main.java.com.healthtracker.model.domain.Meal;
+import main.java.com.healthtracker.model.domain.MealTracker;
 
 public class MealTrackerServiceImpl implements IMealTrackerService {
 	private final MealTracker mealTracker;

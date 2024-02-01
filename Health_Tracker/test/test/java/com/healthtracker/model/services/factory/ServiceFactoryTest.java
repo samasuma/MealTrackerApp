@@ -1,15 +1,15 @@
-package test.com.healthtracker.model.services.factory;
+package test.java.com.healthtracker.model.services.factory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.UUID;
 
-import main.com.healthtracker.model.business.exception.ServiceLoadException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import main.com.healthtracker.model.services.factory.ServiceFactory;
 import main.com.healthtracker.model.services.mealtrackingservice.IMealTrackerService;
+import main.java.com.healthtracker.model.business.exception.ServiceLoadException;
 
 /**
  * JUnit test class for the ServiceFactory.

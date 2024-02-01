@@ -1,10 +1,10 @@
 package main.com.healthtracker.model.business.manager;
 
-import main.com.healthtracker.model.business.exception.ServiceLoadException;
-import main.com.healthtracker.model.domain.Meal;
 import main.com.healthtracker.model.services.exception.MealTrackerServiceException;
 import main.com.healthtracker.model.services.factory.ServiceFactory;
 import main.com.healthtracker.model.services.mealtrackingservice.IMealTrackerService;
+import main.java.com.healthtracker.model.business.exception.ServiceLoadException;
+import main.java.com.healthtracker.model.domain.Meal;
 
 import java.time.LocalDate;
 import java.util.List;
